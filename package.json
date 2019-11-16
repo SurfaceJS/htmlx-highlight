@@ -1,0 +1,23 @@
+{
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "grammars": [
+            {
+                "injectTo": [
+                    "text.html.derivative"
+                ],
+                "path": "./syntaxes/html-expression.tmLanguage.json",
+                "scopeName": "text.html.expression"
+            }
+        ]
+    },
+    "description": "Surface's html expressions highlight",
+    "displayName": "Html Expressions highlight",
+    "engines": {
+        "vscode": "^1.40.0"
+    },
+    "name": "surface.html-expression-highlight",
+    "version": "0.0.1"
+}

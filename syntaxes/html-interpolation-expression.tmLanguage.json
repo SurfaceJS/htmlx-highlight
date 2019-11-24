@@ -1,0 +1,28 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "injectionSelector": "L:text.html.derivative -(comment, meta.directive, meta.tag), meta.attribute.value.html",
+    "name": "Html Expressions",
+    "patterns": [
+        {
+            "begin": "(?<!\\{|\\\\\\\\)(?:\\\\\\\\\\{)?(\\{)",
+            "beginCaptures": {
+                "1": {
+                    "name": "punctuation.definition.template-expression.begin.html"
+                }
+            },
+            "end": "(?<!\\\\\\\\)\\}(?!\\})",
+            "endCaptures": {
+                "0": {
+                    "name": "punctuation.definition.template-expression.end.html"
+                }
+            },
+            "name": "string.interpolated",
+            "patterns": [
+                {
+                    "include": "source.js"
+                }
+            ]
+        }
+    ],
+    "scopeName": "text.html.interpolation-expression"
+}

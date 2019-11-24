@@ -10,6 +10,20 @@
                 ],
                 "path": "./syntaxes/html-expression.tmLanguage.json",
                 "scopeName": "text.html.expression"
+            },
+            {
+                "injectTo": [
+                    "text.html.derivative"
+                ],
+                "path": "./syntaxes/html-attribute-expression.tmLanguage.json",
+                "scopeName": "text.html.attribute-expression"
+            },
+            {
+                "injectTo": [
+                    "text.html.derivative"
+                ],
+                "path": "./syntaxes/html-interpolation-expression.tmLanguage.json",
+                "scopeName": "text.html.interpolation-expression"
             }
         ]
     },

@@ -4,6 +4,61 @@
     "name": "Html Expressions",
     "patterns": [
         {
+            "captures": {
+                "1": {
+                    "name": "constant.character.escape.html"
+                }
+            },
+            "match": "(\\\\[#|{])"
+        },
+        {
+            "begin": "(?<!\\\\)(#import)",
+            "beginCaptures": {
+                "1": {
+                    "name": "keyword.control"
+                }
+            },
+            "end": "(?<!^#import)(?=$|^)",
+            "endCaptures": {
+                "1": {
+                    "name": "keyword.control"
+                }
+            },
+            "name": "meta.directive",
+            "patterns": [
+                {
+                    "begin": "\"",
+                    "beginCaptures": {
+                        "0": {
+                            "name": "punctuation.definition.string.begin.html"
+                        }
+                    },
+                    "end": "\"",
+                    "endCaptures": {
+                        "0": {
+                            "name": "punctuation.definition.string.end.html"
+                        }
+                    },
+                    "name": "string.quoted.double.html"
+                },
+                {
+                    "begin": "'",
+                    "beginCaptures": {
+                        "0": {
+                            "name": "punctuation.definition.string.begin.html"
+                        }
+                    },
+                    "end": "'",
+                    "endCaptures": {
+                        "0": {
+                            "name": "punctuation.definition.string.end.html"
+                        }
+                    },
+                    "name": "string.quoted.single.html"
+                }
+            ]
+        },
+        {
             "begin": "(?<!(?<!\\\\)\\\\)(\\{)",
             "beginCaptures": {
                 "1": {

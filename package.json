@@ -24,6 +24,13 @@
                 ],
                 "path": "./syntaxes/html-interpolation-expression.tmLanguage.json",
                 "scopeName": "text.html.interpolation-expression"
+            },
+            {
+                "injectTo": [
+                    "text.html.derivative"
+                ],
+                "path": "./syntaxes/html-pre-processor.tmLanguage.json",
+                "scopeName": "text.html.pre-processor"
             }
         ]
     },

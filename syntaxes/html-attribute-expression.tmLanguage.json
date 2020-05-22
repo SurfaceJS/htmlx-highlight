@@ -4,15 +4,12 @@
     "name": "Html Attribute Expressions",
     "patterns": [
         {
-            "begin": "((?:on)?)(:)(\\w+)",
+            "begin": "(:)([\\w-]+)",
             "beginCaptures": {
                 "1": {
-                    "name": "keyword"
-                },
-                "2": {
                     "name": "keyword.operator"
                 },
-                "3": {
+                "2": {
                     "name": "entity.other.attribute-name.html"
                 }
             },
@@ -25,7 +22,7 @@
             ]
         },
         {
-            "begin": "(::)(\\w+)",
+            "begin": "(::)([\\w-]+)",
             "beginCaptures": {
                 "1": {
                     "name": "keyword.operator"
@@ -117,7 +114,7 @@
                                     "name": "punctuation.definition.template-expression.end.html"
                                 }
                             },
-                            "name": "string.quoted.double.html",
+                            "name": "string.quoted.double.expression.html",
                             "patterns": [
                                 {
                                     "include": "source.js"
@@ -137,7 +134,7 @@
                                     "name": "punctuation.definition.template-expression.end.html"
                                 }
                             },
-                            "name": "string.quoted.single.html",
+                            "name": "string.quoted.single.expression.html",
                             "patterns": [
                                 {
                                     "include": "source.js"

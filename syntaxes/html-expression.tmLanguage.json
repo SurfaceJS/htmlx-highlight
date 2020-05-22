@@ -8,6 +8,9 @@
         },
         {
             "include": "#expression"
+        },
+        {
+            "include": "#directives"
         }
     ],
     "repository": {
@@ -114,26 +117,49 @@
             ]
         },
         "directives": {
-            "begin": "(#\\b(?:if|else-if|else|for)\\b)|(#\\b(?:inject(?:or)?))\\b(?:(:)(\\w+))?\\b",
-            "beginCaptures": {
-                "1": {
-                    "name": "keyword.control"
-                },
-                "2": {
-                    "name": "keyword.control"
-                },
-                "3": {
-                    "name": "punctuation.separator.key-value.html"
-                },
-                "4": {
-                    "name": "entity.other.attribute-name.html"
-                }
-            },
-            "end": "(?=\\s*+[^=\\s])",
-            "name": "meta.directive",
-            "patterns": [
+            "patterns":
+            [
                 {
-                    "include": "text.html.attribute-expression#expression"
+                    "begin": "(#\\b(?:if|else-if|else|for|(?:inject|placeholder)-key)\\b)|(#\\b(?:(?:inject|placeholder)))\\b(?:(:)(\\w+))?\\b",
+                    "beginCaptures": {
+                        "1": {
+                            "name": "keyword.control"
+                        },
+                        "2": {
+                            "name": "keyword.control"
+                        },
+                        "3": {
+                            "name": "punctuation.separator.key-value.html"
+                        },
+                        "4": {
+                            "name": "entity.other.attribute-name.html"
+                        }
+                    },
+                    "end": "(?=\\s*+[^=\\s])",
+                    "name": "meta.directive",
+                    "patterns": [
+                        {
+                            "include": "text.html.attribute-expression#expression"
+                        }
+                    ]
+                },
+                {
+                    "begin": "(#\\b(?:\\w|-)+\\b)(?::((?:\\w|-)+))?",
+                    "beginCaptures": {
+                        "1": {
+                            "name": "variable.other"
+                        },
+                        "2": {
+                            "name": "entity.other.attribute-name.html"
+                        }
+                    },
+                    "end": "(?=\\s*+[^=\\s])",
+                    "name": "meta.directive",
+                    "patterns": [
+                        {
+                            "include": "text.html.attribute-expression#expression"
+                        }
+                    ]
                 }
             ]
         }

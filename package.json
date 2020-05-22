@@ -29,8 +29,8 @@
                 "injectTo": [
                     "text.html.derivative"
                 ],
-                "path": "./syntaxes/html-pre-processor.tmLanguage.json",
-                "scopeName": "text.html.pre-processor"
+                "path": "./syntaxes/html-directive-expression.tmLanguage.json",
+                "scopeName": "text.html.directive-expression"
             }
         ]
     },

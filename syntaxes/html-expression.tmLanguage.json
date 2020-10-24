@@ -120,7 +120,7 @@
             "patterns":
             [
                 {
-                    "begin": "(#\\b(?:if|else-if|else|for|(?:inject|placeholder)-key)\\b)|(#\\b(?:(?:inject|placeholder)))\\b(?:(:)(\\w+))?\\b",
+                    "begin": "((?:@\\w+)|#\\b(?:if|else-if|else|for|(?:inject|placeholder)-key)\\b)|(#\\b(?:(?:inject|placeholder)))\\b(?:(:)(\\w+))?\\b",
                     "beginCaptures": {
                         "1": {
                             "name": "keyword.control"

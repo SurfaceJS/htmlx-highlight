@@ -39,7 +39,7 @@
     "engines": {
         "vscode": "^1.40.0"
     },
-    "icon": "https://github.com/SurfaceJS/htmlx-highlight/tree/master/assets/htmlx.png",
+    "icon": "https://github.com/SurfaceJS/htmlx-highlight/tree/main/assets/htmlx.png",
     "name": "surface.htmlx-highlight",
     "version": "0.0.1"
 }

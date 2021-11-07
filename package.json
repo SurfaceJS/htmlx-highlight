@@ -34,11 +34,12 @@
             }
         ]
     },
-    "description": "Surface's htmlx highlight",
-    "displayName": "Htmlx highlight",
+    "description": "Surface's htmlx syntax highlight",
+    "displayName": "@surface/Htmlx syntax highlight",
     "engines": {
         "vscode": "^1.40.0"
     },
+    "icon": "https://github.com/SurfaceJS/htmlx-highlight/tree/master/assets/htmlx.png",
     "name": "surface.htmlx-highlight",
     "version": "0.0.1"
 }

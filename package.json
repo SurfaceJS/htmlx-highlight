@@ -8,16 +8,38 @@
                 "injectTo": [
                     "text.html.derivative"
                 ],
-                "path": "./syntaxes/html-expression.tmLanguage.json",
-                "scopeName": "text.html.expression"
+                "path": "./syntaxes/htmlx-custom-element.tmLanguage.json",
+                "scopeName": "text.htmlx.custom-element"
+            },
+            {
+                "injectTo": [
+                    "text.html.derivative"
+                ],
+                "path": "./syntaxes/htmlx-directive.tmLanguage.json",
+                "scopeName": "text.htmlx.directive"
+            },
+            {
+                "injectTo": [
+                    "text.html.derivative"
+                ],
+                "path": "./syntaxes/htmlx-attribute.tmLanguage.json",
+                "scopeName": "text.htmlx.attribute"
+            },
+            {
+                "injectTo": [
+                    "text.html.derivative"
+                ],
+                "path": "./syntaxes/htmlx-interpolation.tmLanguage.json",
+                "scopeName": "text.htmlx.interpolation"
             }
         ]
     },
-    "description": "Surface's html expressions highlight",
-    "displayName": "Html Expressions highlight",
+    "description": "Surface's htmlx syntax highlight",
+    "displayName": "@surface/Htmlx syntax highlight",
     "engines": {
         "vscode": "^1.40.0"
     },
-    "name": "surface.html-expression-highlight",
+    "icon": "https://github.com/SurfaceJS/htmlx-highlight/tree/master/assets/htmlx.png",
+    "name": "surface.htmlx-highlight",
     "version": "0.0.1"
 }

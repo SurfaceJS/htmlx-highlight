@@ -8,37 +8,37 @@
                 "injectTo": [
                     "text.html.derivative"
                 ],
-                "path": "./syntaxes/html-expression.tmLanguage.json",
+                "path": "./syntaxes/htmlx-expression.tmLanguage.json",
                 "scopeName": "text.html.expression"
             },
             {
                 "injectTo": [
                     "text.html.derivative"
                 ],
-                "path": "./syntaxes/html-attribute-expression.tmLanguage.json",
+                "path": "./syntaxes/htmlx-attribute-expression.tmLanguage.json",
                 "scopeName": "text.html.attribute-expression"
             },
             {
                 "injectTo": [
                     "text.html.derivative"
                 ],
-                "path": "./syntaxes/html-interpolation-expression.tmLanguage.json",
+                "path": "./syntaxes/htmlx-interpolation-expression.tmLanguage.json",
                 "scopeName": "text.html.interpolation-expression"
             },
             {
                 "injectTo": [
                     "text.html.derivative"
                 ],
-                "path": "./syntaxes/html-directive-expression.tmLanguage.json",
+                "path": "./syntaxes/htmlx-directive-expression.tmLanguage.json",
                 "scopeName": "text.html.directive-expression"
             }
         ]
     },
-    "description": "Surface's html expressions highlight",
-    "displayName": "Html Expressions highlight",
+    "description": "Surface's htmlx highlight",
+    "displayName": "Htmlx highlight",
     "engines": {
         "vscode": "^1.40.0"
     },
-    "name": "surface.html-expression-highlight",
+    "name": "surface.htmlx-highlight",
     "version": "0.0.1"
 }

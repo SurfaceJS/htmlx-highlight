@@ -120,7 +120,7 @@
             "patterns":
             [
                 {
-                    "begin": "((?:@\\w+)|#\\b(?:if|else-if|else|for|(?:inject|placeholder)-key)\\b)|(#\\b(?:(?:inject|placeholder)))\\b(?:(:)(\\w+))?\\b",
+                    "begin": "((?:@\\w+)|#\\b(?:if|else-if|else|for)\\b)|(#\\b(?:(?:inject|placeholder))\\b)(?:(?:(\\.)(?:(key|scope)|(\\w+)))|(?:(:)(\\w+)))?",
                     "beginCaptures": {
                         "1": {
                             "name": "keyword.control"
@@ -132,6 +132,15 @@
                             "name": "punctuation.separator.key-value.html"
                         },
                         "4": {
+                            "name": "entity.other.attribute-name.html"
+                        },
+                        "5": {
+                            "name": "invalid.illegal"
+                        },
+                        "6": {
+                            "name": "punctuation.separator.key-value.html"
+                        },
+                        "7": {
                             "name": "entity.other.attribute-name.html"
                         }
                     },

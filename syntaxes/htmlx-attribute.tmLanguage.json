@@ -1,7 +1,7 @@
 {
     "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
     "injectionSelector": "L:meta.tag - (comment, meta.attribute)",
-    "name": "Html Attribute Expressions",
+    "name": "HTMLX Attribute",
     "patterns": [
         {
             "begin": "(:)([\\w-]+)",
@@ -14,7 +14,7 @@
                 }
             },
             "end": "(?=\\s*+[^=\\s])",
-            "name": "meta.directive.one-way-databind",
+            "name": "meta.directive.databind.one-way",
             "patterns": [
                 {
                     "include": "#expression"
@@ -32,7 +32,7 @@
                 }
             },
             "end": "(?=\\s*+[^=\\s])",
-            "name": "meta.directive.two-way-databind",
+            "name": "meta.directive.databind.two-way",
             "patterns": [
                 {
                     "begin": "=",
@@ -150,5 +150,5 @@
             ]
         }
     },
-    "scopeName": "text.html.attribute-expression"
+    "scopeName": "text.htmlx.attribute"
 }

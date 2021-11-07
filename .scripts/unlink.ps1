@@ -1,4 +1,4 @@
-$linkPath   = "$Env:USERPROFILE\.vscode\extensions\surface.htmlx-highlight";
+$linkPath   = "$Env:USERPROFILE\.vscode\extensions\surface.htmlx";
 $pathExists = Test-Path $linkPath;
 
 if ($pathExists) {

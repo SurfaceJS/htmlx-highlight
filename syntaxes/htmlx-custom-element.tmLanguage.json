@@ -1,20 +1,14 @@
 {
     "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
     "injectionSelector": "L:text.html.derivative - (comment, source.js)",
-    "name": "Html Expressions",
+    "name": "HTMLX Custom Element",
     "patterns": [
         {
-            "include": "#custom-tags"
-        },
-        {
-            "include": "#expression"
-        },
-        {
-            "include": "#directives"
+            "include": "#custom-element"
         }
     ],
     "repository": {
-        "custom-tags": {
+        "custom-element": {
             "patterns": [
                 {
                     "begin": "(<)(\\w+(?:-\\w+)+)(?=\\s|/?>)",
@@ -115,63 +109,7 @@
                     ]
                 }
             ]
-        },
-        "directives": {
-            "patterns":
-            [
-                {
-                    "begin": "((?:@\\w+)|#\\b(?:if|else-if|else|for)\\b)|(#\\b(?:(?:inject|placeholder))\\b)(?:(?:(\\.)(?:(key|scope)|(\\w+)))|(?:(:)(\\w+)))?",
-                    "beginCaptures": {
-                        "1": {
-                            "name": "keyword.control"
-                        },
-                        "2": {
-                            "name": "keyword.control"
-                        },
-                        "3": {
-                            "name": "punctuation.separator.key-value.html"
-                        },
-                        "4": {
-                            "name": "entity.other.attribute-name.html"
-                        },
-                        "5": {
-                            "name": "invalid.illegal"
-                        },
-                        "6": {
-                            "name": "punctuation.separator.key-value.html"
-                        },
-                        "7": {
-                            "name": "entity.other.attribute-name.html"
-                        }
-                    },
-                    "end": "(?=\\s*+[^=\\s])",
-                    "name": "meta.directive",
-                    "patterns": [
-                        {
-                            "include": "text.html.attribute-expression#expression"
-                        }
-                    ]
-                },
-                {
-                    "begin": "(#\\b(?:\\w|-)+\\b)(?::((?:\\w|-)+))?",
-                    "beginCaptures": {
-                        "1": {
-                            "name": "variable.other"
-                        },
-                        "2": {
-                            "name": "entity.other.attribute-name.html"
-                        }
-                    },
-                    "end": "(?=\\s*+[^=\\s])",
-                    "name": "meta.directive",
-                    "patterns": [
-                        {
-                            "include": "text.html.attribute-expression#expression"
-                        }
-                    ]
-                }
-            ]
         }
     },
-    "scopeName": "text.html.expression"
+    "scopeName": "text.htmlx.custom-element"
 }

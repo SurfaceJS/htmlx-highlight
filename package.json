@@ -8,29 +8,29 @@
                 "injectTo": [
                     "text.html.derivative"
                 ],
-                "path": "./syntaxes/htmlx-expression.tmLanguage.json",
-                "scopeName": "text.html.expression"
+                "path": "./syntaxes/htmlx-custom-element.tmLanguage.json",
+                "scopeName": "text.htmlx.custom-element"
             },
             {
                 "injectTo": [
                     "text.html.derivative"
                 ],
-                "path": "./syntaxes/htmlx-attribute-expression.tmLanguage.json",
-                "scopeName": "text.html.attribute-expression"
+                "path": "./syntaxes/htmlx-directive.tmLanguage.json",
+                "scopeName": "text.htmlx.directive"
             },
             {
                 "injectTo": [
                     "text.html.derivative"
                 ],
-                "path": "./syntaxes/htmlx-interpolation-expression.tmLanguage.json",
-                "scopeName": "text.html.interpolation-expression"
+                "path": "./syntaxes/htmlx-attribute.tmLanguage.json",
+                "scopeName": "text.htmlx.attribute"
             },
             {
                 "injectTo": [
                     "text.html.derivative"
                 ],
-                "path": "./syntaxes/htmlx-directive-expression.tmLanguage.json",
-                "scopeName": "text.html.directive-expression"
+                "path": "./syntaxes/htmlx-interpolation.tmLanguage.json",
+                "scopeName": "text.htmlx.interpolation"
             }
         ]
     },

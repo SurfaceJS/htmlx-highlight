@@ -1,6 +1,6 @@
 {
     "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-    "injectionSelector": "L:text.html.derivative - (comment, source.js)",
+    "injectionSelector": "L:meta.tag - (comment, source.js)",
     "name": "HTMLX Directive",
     "patterns": [
         {
@@ -48,13 +48,31 @@
                     ]
                 },
                 {
-                    "begin": "(#\\b(?:\\w|-)+\\b)(?::((?:\\w|-)+))?",
+                    "begin": "(#\\b(?:\\w|-)+\\b)",
                     "beginCaptures": {
                         "1": {
                             "name": "variable.other"
+                        }
+                    },
+                    "end": "(?=\\s*+[^=\\s])",
+                    "name": "meta.directive",
+                    "patterns": [
+                        {
+                            "include": "text.htmlx.attribute#expression"
+                        }
+                    ]
+                },
+                {
+                    "begin": "(\\.{3})((?:(?:attributes|binds|injections|listeners)(\\|)?){1,4})(?<!\\|)",
+                    "beginCaptures": {
+                        "1": {
+                            "name": "keyword.operator.spread.js"
                         },
                         "2": {
-                            "name": "entity.other.attribute-name.html"
+                            "name": "variable.other"
+                        },
+                        "3": {
+                            "name": "punctuation.separator.key-value.html"
                         }
                     },
                     "end": "(?=\\s*+[^=\\s])",

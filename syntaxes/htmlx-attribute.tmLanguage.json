@@ -63,7 +63,7 @@
                             "name": "string.quoted.double.html"
                         },
                         {
-                            "match": "(\")(.*)(\")",
+                            "match": "([\"'])(.*)(\\1)",
                             "captures": {
                                 "1": {
                                     "name": "punctuation.definition.template-expression.begin.html"
